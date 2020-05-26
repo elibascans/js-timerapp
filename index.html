@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="timer">
+
+        <h1 class="heading">Timer</h1>
+
+        <div class="svg">
+          <div class="outter-circle">
+          </div>
+
+
+          <svg class="svg__dial">
+            <rect fill="url(#myGradient)" width="400" height="400" mask="url(#myMask)" />
+
+            <mask id="myMask">
+              <rect fill="black" width="400" height="400" />
+              <circle
+                fill="transparent"
+                stroke="white"
+                stroke-width="14"
+                r="100"
+                cx="0"
+                cy="200"
+                transform="rotate(-90 100 100)"
+                stroke-linecap="round"
+              />
+            </mask>
+
+            <linearGradient id="myGradient">
+              <stop offset="0" class="gradient-col1" />
+              <stop offset="1" class="gradient-col2" />
+          </svg>
+
+          <div class="timer__count">
+            <input id="duration" value="10" class="timer__input" />
+          </div>
+        </div>
+
+
+        <div class="timer__controls">
+          <button id="start" class="btn"><i class="fas fa-play"></i></button>
+          <button id="reset" class="btn">
+            <i class="fas fa-sync-alt"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="timer.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
